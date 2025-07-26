@@ -1,0 +1,4 @@
+body { font-family: sans-serif; padding: 2em; background: #f0f0f0; }
+input { width: 300px; padding: 0.5em; }
+button { padding: 0.5em 1em; }
+.resposta { margin-top: 2em; padding: 1em; background: white; border-radius: 8px; }

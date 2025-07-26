@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta Populacional</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Consulta de População</h1>
+  <form action="/consultar" method="post">
+    <input type="text" name="pergunta" placeholder="Ex: Qual a população de Niterói?">
+    <button type="submit">Consultar</button>
+  </form>
+  {% if resposta %}
+  <div class="resposta">
+    <h3>Resposta:</h3>
+    <p>{{ resposta }}</p>
+  </div>
+  {% endif %}
+</body>
+</html>

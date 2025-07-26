@@ -1,0 +1,6 @@
+openai
+flask
+pandas
+python-dotenv
+pyyaml
+schedule
