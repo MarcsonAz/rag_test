@@ -1,4 +1,7 @@
 consulta_template: |
   Abaixo está uma pergunta em linguagem natural. Extraia os parâmetros necessários para consultar uma base de dados de população do Brasil:
   Pergunta: {input}
-  Retorne um JSON com os campos: municipio, ano, tipo (população, densidade, etc.)
+  Retorne um JSON com os campos: estado, municipio, valor da população.
+  Controle: Estados são a mesma coisa que Unidades da Federação ou usados pela sigla UF; 
+  O contexto de localização é dado pelo nome da UF e nome do município;
+  O código de um muncípio é a junção do código da UF mais o do município.
