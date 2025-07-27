@@ -144,6 +144,16 @@ ENV/
 env.bak/
 venv.bak/
 
+# Ignorar a pasta do ambiente virtual
+.venv/
+
+# Ignorar o arquivo de variáveis de ambiente
+.env
+
+# Outras pastas e arquivos do sistema
+__pycache__/
+*.pyc
+
 # Spyder project settings
 .spyderproject
 .spyproject
