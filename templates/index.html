@@ -14,8 +14,21 @@
   {% if resposta %}
   <div class="resposta">
     <h3>Resposta:</h3>
-    <p>{{ resposta }}</p>
+    {{ resposta|safe }}
   </div>
   {% endif %}
+
+<h1>TESTE - Consulta de População</h1>
+  <form action="/teste" method="post">
+    <input type="text" name="pergunta_teste" placeholder="Ex: Qual a população de Araruama?">
+    <button type="submit">Consultar</button>
+  </form>
+  {% if resp_teste %}
+  <div class="resp_teste">
+    <h3>Resposta:</h3>
+    {{ resp_teste|safe }}
+  </div>
+  {% endif %}
+
 </body>
 </html>
