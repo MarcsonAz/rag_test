@@ -8,5 +8,6 @@ def formatar_resposta(resultados):
         return mensagens["no_result"]
     linhas = []
     for _, row in resultados.iterrows():
-        linhas.append(f'{row["nome_municipio"]}: {row["populacao"]}')
+        populacao_formatada = f'{row["populacao"]:,}'.replace(',', '.')
+        linhas.append(f'{row["nome_municipio"]}: {populacao_formatada}')
     return "<br>".join(linhas)
