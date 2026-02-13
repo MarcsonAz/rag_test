@@ -17,15 +17,15 @@ def filtrar_por_retorno(df,retorno_list):
     """
 
     try:
-        if not retorno_list or "content" not in retorno_list[0]:
+        if not retorno_list or not isinstance(retorno_list, str):
             raise ValueError("Lista de retorno do LLM está vazia ou malformada.")
         
         # somente para 1 mensagem
-        texto_json = retorno_list[0]['content'][0]['text']
+        #texto_json = retorno_list[0]['content'][0]['text']
         print('\n ------------------M------------------------------ \n')
 
-        print(texto_json)
-        filtros = json.loads(texto_json)
+        print(retorno_list)
+        filtros = json.loads(retorno_list)
         df_filtrado = df.copy()
         
         # Para cada chave vinda do LLM, ver se tem mapeamento para coluna no DF
